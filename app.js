@@ -1,3 +1,5 @@
+
+
 // All book objects are going to be stored in myLibrary
 let myLibrary = [];
 
@@ -28,7 +30,11 @@ let addedContainer = document.querySelector(".addedContainer")
 
 
 
-addButton.addEventListener("click", function(e) {
+
+
+addButton.addEventListener("click", createBook);
+
+function createBook() {
     // addedBook is a div/ box for each book
     let addedBook = document.createElement("div");  
 
@@ -96,6 +102,9 @@ addButton.addEventListener("click", function(e) {
     pagesDisplay.classList.add("informations")
     readDisplay.classList.add("informations")
 
+
+    
+
     // Wipe out the inputs
     authorInput.value = "";
     titleInput.value = "";
@@ -116,5 +125,6 @@ addButton.addEventListener("click", function(e) {
         
     })
 
-})
 
+
+}
